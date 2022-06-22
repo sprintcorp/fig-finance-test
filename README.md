@@ -257,6 +257,9 @@ Default API URL is `http://127.0.0.1:5000/api`. API url can  is located in the d
    ![image](https://user-images.githubusercontent.com/37757522/174411210-9521b97c-06f4-4795-b753-1df63fb06565.png)
    
    ![image](https://user-images.githubusercontent.com/37757522/174411218-ab0d4380-f0a8-41d5-a31a-f0b7066392fd.png)
+   
+   ![image](https://user-images.githubusercontent.com/37757522/175020155-a69092fd-daf0-49ab-be58-6e75c4987c2a.png)
+
 
 
 
