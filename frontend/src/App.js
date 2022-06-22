@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import HomeScreen from "./page/HomeScreen";
 import FooterComponent from "./components/FooterComponent";
+import CreateEventScreen from "./page/CreateEventScreen";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
               <HeaderComponent/>
                 <Routes>
                   <Route exact path="/" element={<HomeScreen/>} />
-                  {/*<Route exact path="/detail/:id" element={<Detail/>} />*/}
+                  <Route exact path="/event" element={<CreateEventScreen/>} />
                 </Routes>
               <FooterComponent/>
           </Router>

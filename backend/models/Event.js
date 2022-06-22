@@ -19,7 +19,7 @@ const EventSchema = new mongoose.Schema({
         type: String
     },
     isVirtual:{
-        type:Boolean,
+        type:String,
         default:false,
         required:true,
     },
