@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1187915-7a6a-463b-ae3c-6fb7b6c083eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/page/CreateEventScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/CreateEventScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/page/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/page/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/EventAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/EventAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/reducers/EventReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/reducers/EventReducers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +46,7 @@
       <updated>1655406816007</updated>
       <workItem from="1655406823944" duration="64676000" />
       <workItem from="1655883278557" duration="321000" />
-      <workItem from="1655884093838" duration="13314000" />
+      <workItem from="1655884093838" duration="13606000" />
     </task>
     <servers />
   </component>

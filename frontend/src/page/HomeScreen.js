@@ -8,7 +8,7 @@ function HomeScreen() {
   const dispatch = useDispatch();
 
   const [event, setEvent] = useState({});
-  const [limit, setLimit] = useState();
+  const defaultLimit = 9;
 
 
   const events = useSelector((state) => state.eventList);
@@ -17,7 +17,7 @@ function HomeScreen() {
   console.log(events.pagination);
 
   useEffect(() => {
-    dispatch(getEventsAction());
+    dispatch(getEventsAction(defaultLimit));
     dispatch(getCategoriesAction())
   },[dispatch]);
 
@@ -122,20 +122,20 @@ function HomeScreen() {
             <ul className="pagination justify-content-end">
               {events.pagination && events.pagination.prev ? (
                 <li className="page-item" onClick={()=>paginateFilter(events.pagination.prev.limit,events.pagination.prev.page)}>
-                  <a className="page-link" href="#">Previous</a>
+                  <span className="page-link">Previous</span>
                 </li>
               ): (
                 <li className="page-item disabled">
-                  <a className="page-link" href="#">Previous</a>
+                  <span className="page-link">Previous</span>
                 </li>
               )}
               {events.pagination && events.pagination.next ? (
               <li className="page-item" onClick={()=>paginateFilter(events.pagination.next.limit,events.pagination.next.page)}>
-                <a className="page-link" href="#">Next</a>
+                <span className="page-link">Next</span>
               </li>
                 ): (
                 <li className="page-item disabled">
-                  <a className="page-link" href="#">Next</a>
+                  <span className="page-link">Next</span>
                 </li>
               )}
             </ul>

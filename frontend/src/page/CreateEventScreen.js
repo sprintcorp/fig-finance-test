@@ -36,7 +36,7 @@ function CreateEventScreen() {
 		setAddress("");
 		setCategory("");
 		setVirtual("");
-	},[dispatch,error]);
+	},[dispatch,error,event]);
 
 	const submitHandler = (e) => {
 		e.preventDefault();
