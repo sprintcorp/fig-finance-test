@@ -8,9 +8,13 @@ function HomeScreen() {
   const dispatch = useDispatch();
 
   const [event, setEvent] = useState({});
+  const [limit, setLimit] = useState();
+
 
   const events = useSelector((state) => state.eventList);
   const categories  = useSelector((state) => state.categoryList);
+
+  console.log(events.pagination);
 
   useEffect(() => {
     dispatch(getEventsAction());
@@ -21,9 +25,20 @@ function HomeScreen() {
     setEvent(data)
   }
 
+  const paginateFilter = (limit,page) =>{
+    dispatch(getEventsAction(limit,page));
+  }
+
+  const Change = (data) =>{
+    dispatch(getEventsAction(data));
+  }
+
   const filterEventByCategory = (data) =>{
     dispatch(getEventsByCategory(data));
   }
+
+
+
 
   const getAllEvent = () =>{
     dispatch(getEventsAction());
@@ -52,7 +67,17 @@ function HomeScreen() {
             ))}
 
         </div>
-        <div className="h5 mt-5">Events</div>
+        <div className="row mt-5 d-flex justify-content-between">
+          <div className="col-md-8">Events</div>
+
+          <div className="col-md-3">
+          <select className="form-select" onChange={(e)=>Change(e.target.value)} aria-label="Default select example">
+            <option value="all">All</option>
+            <option value="9">9</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+        </div>
 
         <div className="event-body mt-3">
           <div className="row d-flex">
@@ -92,6 +117,29 @@ function HomeScreen() {
 
             )}
           </div>
+
+          <nav aria-label="Page mt-3 navigation example">
+            <ul className="pagination justify-content-end">
+              {events.pagination && events.pagination.prev ? (
+                <li className="page-item" onClick={()=>paginateFilter(events.pagination.prev.limit,events.pagination.prev.page)}>
+                  <a className="page-link" href="#">Previous</a>
+                </li>
+              ): (
+                <li className="page-item disabled">
+                  <a className="page-link" href="#">Previous</a>
+                </li>
+              )}
+              {events.pagination && events.pagination.next ? (
+              <li className="page-item" onClick={()=>paginateFilter(events.pagination.next.limit,events.pagination.next.page)}>
+                <a className="page-link" href="#">Next</a>
+              </li>
+                ): (
+                <li className="page-item disabled">
+                  <a className="page-link" href="#">Next</a>
+                </li>
+              )}
+            </ul>
+          </nav>
         </div>
       </div>
 

@@ -63,6 +63,7 @@ function CreateEventScreen() {
 										 onChange={(e) => setAddress(e.target.value)}
 										 aria-describedby="address" required/>
 						</div>
+
 						<div className="mb-3">
 							<label htmlFor="category" className="form-label">Category</label>
 							<select className="form-control" id="category" value={category}

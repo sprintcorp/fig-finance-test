@@ -17,6 +17,7 @@ export const eventReducers = (state={events:[]},action) =>{
             return {
                 loading: false,
                 events: action.payload.data,
+                pagination:action.payload.pagination
             };
         case GET_EVENT_FAIL:
             return { loading: false, error: action.payload };

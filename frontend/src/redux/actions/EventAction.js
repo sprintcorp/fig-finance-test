@@ -8,10 +8,10 @@ import {
 import {BACKEND_URL} from "../../server";
 
 
-export const getEventsAction = () => async(dispatch)=>{
+export const getEventsAction = (limit = '',page='') => async(dispatch)=>{
     try{
         dispatch({type:GET_EVENTS_REQUEST});
-        const {data} = await axios(BACKEND_URL+"/events");
+        const {data} = await axios(BACKEND_URL+"/events?limit="+limit+"&page="+page);
         dispatch({ type: GET_EVENTS_ACTION, payload: data });
     }catch (error){
         dispatch({
