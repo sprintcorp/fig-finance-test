@@ -12,7 +12,7 @@ allows users to filter through various categories of event.
 ## Tools
 - NodeJs
 - ReactJs Framework
-- ExpressJs Framework
+- ExpressJs
 - MongoDb
 - Mongoose
 - Docker
